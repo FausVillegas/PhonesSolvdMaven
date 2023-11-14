@@ -1,0 +1,79 @@
+2023-11-13 23:35:14,070 INFO c.s.P.p.Phone [main] Phone/s created
+2023-11-13 23:35:14,120 INFO c.s.P.p.SmartPhone [main] Contact saved in SmartPhone: Faus 111
+2023-11-13 23:35:14,122 INFO c.s.P.p.GamingPhone [main] Contact saved in GamingPhone: ccccc 3333
+2023-11-13 23:35:14,124 INFO c.s.P.p.GamingPhone [main] Contact saved in GamingPhone: aaaaa 1111
+2023-11-13 23:35:14,125 INFO c.s.P.p.GamingPhone [main] Contact saved in GamingPhone: dddd 4444
+2023-11-13 23:35:14,126 INFO c.s.P.p.GamingPhone [main] Contact saved in GamingPhone: bbbb 2222
+2023-11-13 23:35:14,129 INFO c.s.P.p.FeaturePhone [main] Contact saved in FeaturePhone: Agus 3333
+2023-11-13 23:35:14,131 INFO c.s.P.p.Phone [main] ContactList ROGPhone6DUltimate ASUS: 
+2023-11-13 23:35:14,134 INFO c.s.P.p.Phone [main] aaaaa: 1111
+2023-11-13 23:35:14,135 INFO c.s.P.p.Phone [main] bbbb: 2222
+2023-11-13 23:35:14,136 INFO c.s.P.p.Phone [main] ccccc: 3333
+2023-11-13 23:35:14,137 INFO c.s.P.p.Phone [main] dddd: 4444
+2023-11-13 23:35:14,138 INFO c.s.P.p.GamingPhone [main] List of video games
+2023-11-13 23:35:14,140 INFO c.s.P.p.GamingPhone [main] game1
+2023-11-13 23:35:14,141 INFO c.s.P.p.GamingPhone [main] game2
+2023-11-13 23:35:14,142 INFO c.s.P.p.SmartPhone [main] Photo taken from a SmartPhone: pic3
+2023-11-13 23:35:14,143 INFO c.s.P.p.SmartPhone [main] Photo taken from a SmartPhone: pic1
+2023-11-13 23:35:14,144 INFO c.s.P.p.FeaturePhone [main] Photo taken from a FeaturePhone: pic1
+2023-11-13 23:35:14,145 INFO c.s.P.p.Phone [main] PicturesNamesList S22 Samsung: 
+2023-11-13 23:35:14,148 INFO j.u.ArrayList [main] pic3
+2023-11-13 23:35:14,148 INFO j.u.ArrayList [main] pic1
+2023-11-13 23:35:14,149 INFO c.s.P.p.GamingPhone [main] Video recorded from a GamingPhone: video1
+2023-11-13 23:35:14,150 INFO c.s.P.p.GamingPhone [main] Video recorded from a GamingPhone: video3
+2023-11-13 23:35:14,151 INFO c.s.P.p.GamingPhone [main] Video recorded from a GamingPhone: video2
+2023-11-13 23:35:14,152 INFO c.s.P.p.RuggedPhone [main] Video recorded from a RuggedPhone: video3
+2023-11-13 23:35:14,154 INFO c.s.P.p.Phone [main] VideosNamesList ROGPhone6DUltimate ASUS: 
+2023-11-13 23:35:14,155 INFO j.u.ArrayList [main] video1
+2023-11-13 23:35:14,156 INFO j.u.ArrayList [main] video3
+2023-11-13 23:35:14,157 INFO j.u.ArrayList [main] video2
+2023-11-13 23:35:14,164 INFO c.s.P.p.Phone [main] App Ig installed in Samsung S22
+2023-11-13 23:35:14,165 INFO c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-11-13 23:35:14,166 INFO c.s.P.p.Phone [main] App WhatsApp installed in Samsung S22
+2023-11-13 23:35:14,168 INFO c.s.P.p.Phone [main] Apps Samsung S22: 
+2023-11-13 23:35:14,169 INFO j.l.Iterable [main] Ig
+2023-11-13 23:35:14,170 INFO j.l.Iterable [main] YouTube
+2023-11-13 23:35:14,170 INFO j.l.Iterable [main] WhatsApp
+2023-11-13 23:35:14,179 INFO c.s.P.Main [main] true
+2023-11-13 23:35:14,221 INFO c.s.P.Main [main] Phone Samsung S22
+	Battery{capacityMah=4000, batteryState=30}
+	Camera{rearCameraResolution=50MP}
+	Connectivity{chargeConnectivity='USB-C'}
+	Display{size=6.1"}
+	Processor{CPU='Octa-Core'}
+	StorageMemory{storage=128GB, RAM=8.0GB}
+	OperatingSystem=Android
+	DualSim=true
+
+2023-11-13 23:35:14,223 INFO c.s.P.Main [main] 3
+2023-11-13 23:35:14,224 DEBUG c.s.P.p.c.CustomLinkedList [main] Phone Samsung S22
+	Battery{capacityMah=4000, batteryState=30}
+	Camera{rearCameraResolution=50MP}
+	Connectivity{chargeConnectivity='USB-C'}
+	Display{size=6.1"}
+	Processor{CPU='Octa-Core'}
+	StorageMemory{storage=128GB, RAM=8.0GB}
+	OperatingSystem=Android
+	DualSim=true
+
+2023-11-13 23:35:14,235 DEBUG c.s.P.p.c.CustomLinkedList [main] Phone ASUS ROGPhone6DUltimate
+	Battery{capacityMah=6000, batteryState=40}
+	Camera{rearCameraResolution=50MP}
+	Connectivity{chargeConnectivity='USB-C'}
+	Display{size=6.78"}
+	Processor{CPU='Mali-G710'}
+	StorageMemory{storage=512GB, RAM=16.0GB}
+	OperatingSystem=Android 12
+	DualSim=true
+	GamingMode=true
+
+2023-11-13 23:35:14,236 DEBUG c.s.P.p.c.CustomLinkedList [main] Phone Samsung S23Ultra
+	Battery{capacityMah=4500, batteryState=90}
+	Camera{rearCameraResolution=60MP}
+	Connectivity{chargeConnectivity='USB-C'}
+	Display{size=6.5"}
+	Processor{CPU='Octa-Core'}
+	StorageMemory{storage=512GB, RAM=8.0GB}
+	OperatingSystem=Android
+	DualSim=true
+
