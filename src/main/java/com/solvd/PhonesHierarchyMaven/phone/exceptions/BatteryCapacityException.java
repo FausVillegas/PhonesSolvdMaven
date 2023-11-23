@@ -1,4 +1,4 @@
-package com.solvd.PhonesHierarchyMaven.phone.exceptions;
+package main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions;
 
 public class BatteryCapacityException extends RuntimeException{
     public BatteryCapacityException(String message){

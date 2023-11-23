@@ -1,4 +1,4 @@
-package com.solvd.PhonesHierarchyMaven.phone;
+package main.java.com.solvd.PhonesHierarchyMaven.phone;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -6,7 +6,6 @@ import org.apache.logging.log4j.Logger;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-import java.util.TreeSet;
 
 public final class GamingPhone extends SmartPhone{
     private static final Logger LOGGER = LogManager.getLogger(RuggedPhone.class);

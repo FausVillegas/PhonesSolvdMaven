@@ -1,4 +1,4 @@
-package com.solvd.PhonesHierarchyMaven.phone.features;
+package main.java.com.solvd.PhonesHierarchyMaven.phone.features;
 
 import java.util.Objects;
 

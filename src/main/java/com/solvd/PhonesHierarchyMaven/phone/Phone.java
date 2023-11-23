@@ -1,11 +1,10 @@
-package com.solvd.PhonesHierarchyMaven.phone;
+package main.java.com.solvd.PhonesHierarchyMaven.phone;
 
-import com.solvd.PhonesHierarchyMaven.phone.exceptions.*;
-import com.solvd.PhonesHierarchyMaven.phone.features.*;
-import com.solvd.PhonesHierarchyMaven.phone.interfaces.*;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.*;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.features.*;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 
 import java.security.InvalidParameterException;
 import java.util.*;
@@ -57,6 +56,10 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
     public void setApps(Set<String> apps) {
         this.apps = apps;
     }
+
+    public abstract void call();
+
+    public abstract void charge();
 
     @Override
     public void saveContact(String contactName, long contactNumber) {

@@ -1,4 +1,4 @@
-package com.solvd.PhonesHierarchyMaven.phone.exceptions;
+package main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions;
 
 public class InvalidPriceException extends RuntimeException{
     public InvalidPriceException(String message){

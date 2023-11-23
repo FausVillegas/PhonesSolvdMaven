@@ -1,6 +1,6 @@
-package com.solvd.PhonesHierarchyMaven.phone.features;
+package main.java.com.solvd.PhonesHierarchyMaven.phone.features;
 
-import com.solvd.PhonesHierarchyMaven.phone.exceptions.InvalidCameraResolution;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.InvalidCameraResolution;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

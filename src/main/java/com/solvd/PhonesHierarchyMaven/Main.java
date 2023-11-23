@@ -1,14 +1,18 @@
-package com.solvd.PhonesHierarchyMaven;
+package main.java.com.solvd.PhonesHierarchyMaven;
 
-import com.solvd.PhonesHierarchyMaven.phone.*;
-import com.solvd.PhonesHierarchyMaven.phone.customList.CustomLinkedList;
-import com.solvd.PhonesHierarchyMaven.phone.exceptions.InvalidIntScanner;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.customList.CustomLinkedList;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.InvalidIntScanner;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.*;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Scanner;
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.*;
 
 public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
@@ -20,38 +24,39 @@ public class Main {
         Phone catS62Pro2 = new RuggedPhone("CAT", "S62 PRO", 4000, 0, 12, "USB-C", 5.7, "Snapdragon 660", 128, 6, "Android", false, "Military", 3333333, 700, 180);
         Phone nokia5310 = new FeaturePhone("Nokia", "5310", 1200, 100, 5, "USB 1.1", 2.4, "MT6260A", 16, 0.016, true, false, 444444, 300, 100);
 
-//        ArrayList<Phone> phonesList = new ArrayList<>();
-//        phonesList.add(samsungS22);
-//        phonesList.add(asusRogPhone6DUltimate);
-//        phonesList.add(catS62Pro);
-//        phonesList.add(catS62Pro2);
-//        phonesList.add(nokia5310);
-//
-//        double averageRam = 0;
-//        int phonesToCalculate=0;
-//        try (Scanner scanner = new Scanner(System.in)){
-//            LOGGER.info("Enter the number of phones you want to calculate");
-//            phonesToCalculate = scanner.nextInt();
-//            exceptionOccurs(Phone.getObjectsPhoneCreated(),phonesList,phonesToCalculate);
-//        } catch(ArithmeticException e){
-//            LOGGER.error("ArithmeticException: "+e.getMessage());
-//        } catch(NullPointerException e){
-//            LOGGER.error("NullPointerException: "+e.getMessage());
-//        } catch (InvalidIntScanner e){
-//            LOGGER.error("InvalidIntScanner: "+e.getMessage());
-//        }
-//        double totalRam = 0;
-//        Phone p;
-//        for (int i=0;i<phonesToCalculate;i++) {
-//            p = phonesList.get(i);
-//            if(p.getStorageMemory()==null) {
-//                throw new NullPointerException("StorageMemory is null");
-//            }
-//            totalRam += p.getStorageMemory().getRAM();
-//        }
-//        averageRam = totalRam / phonesToCalculate;
-//        LOGGER.info("averageRam of the first "+phonesToCalculate+" phones: "+averageRam);
+        LOGGER.info("HOla");
 
+//        collections(samsungS22,asusRogPhone6DUltimate,catS62Pro,catS62Pro2,nokia5310);
+//
+//        calculateAverageRam(samsungS22,asusRogPhone6DUltimate,catS62Pro,catS62Pro2,nokia5310);
+
+        // The files strings.txt and output.txt are in the directory: resources
+        File stringsFile = new File("src/main/resources/strings.txt");
+
+        String content = null;
+        try {
+            content = FileUtils.readFileToString(stringsFile,"UTF-8");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        content = content.replaceAll("[^A-Za-z ]", "");
+
+        String[] words = StringUtils.split(content);
+
+        Set<String> uniqueWords = new HashSet<>();
+        for(String word : words){
+            uniqueWords.add(word.toLowerCase());
+        }
+
+        try {
+            FileUtils.writeStringToFile(new File("src/main/resources/output.txt"),"Total unique words: "+uniqueWords.size()+"\n", Charset.defaultCharset(),false);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void collections(Phone samsungS22, Phone asusRogPhone6DUltimate, Phone catS62Pro, Phone catS62Pro2, Phone nokia5310){
         // ContactList
         samsungS22.saveContact("Faus",111);
         asusRogPhone6DUltimate.saveContact("ccccc",3333);
@@ -63,10 +68,10 @@ public class Main {
         asusRogPhone6DUltimate.showContactList();
 
         // VideoGamesList
-        asusRogPhone6DUltimate.installVideoGame("game2");
-        asusRogPhone6DUltimate.installVideoGame("game1");
+        ((GamingPhone)asusRogPhone6DUltimate).installVideoGame("game2");
+        ((GamingPhone)asusRogPhone6DUltimate).installVideoGame("game1");
 
-        asusRogPhone6DUltimate.showVideoGames();
+        ((GamingPhone)asusRogPhone6DUltimate).showVideoGames();
 
         // PicturesNamesList
         samsungS22.takeAPicture("pic3");
@@ -103,6 +108,39 @@ public class Main {
 
         LOGGER.info(customLinkedListPhones.length());
         customLinkedListPhones.show();
+    }
+    public static void calculateAverageRam(Phone samsungS22, Phone asusRogPhone6DUltimate, Phone catS62Pro, Phone catS62Pro2, Phone nokia5310){
+        ArrayList<Phone> phonesList = new ArrayList<>();
+        phonesList.add(samsungS22);
+        phonesList.add(asusRogPhone6DUltimate);
+        phonesList.add(catS62Pro);
+        phonesList.add(catS62Pro2);
+        phonesList.add(nokia5310);
+
+        double averageRam = 0;
+        int phonesToCalculate=0;
+        try (Scanner scanner = new Scanner(System.in)){
+            LOGGER.info("Enter the number of phones you want to calculate");
+            phonesToCalculate = scanner.nextInt();
+            exceptionOccurs(Phone.getObjectsPhoneCreated(),phonesList,phonesToCalculate);
+        } catch(ArithmeticException e){
+            LOGGER.error("ArithmeticException: "+e.getMessage());
+        } catch(NullPointerException e){
+            LOGGER.error("NullPointerException: "+e.getMessage());
+        } catch (InvalidIntScanner e){
+            LOGGER.error("InvalidIntScanner: "+e.getMessage());
+        }
+        double totalRam = 0;
+        Phone p;
+        for (int i=0;i<phonesToCalculate;i++) {
+            p = phonesList.get(i);
+            if(p.getStorageMemory()==null) {
+                throw new NullPointerException("StorageMemory is null");
+            }
+            totalRam += p.getStorageMemory().getRAM();
+        }
+        averageRam = totalRam / phonesToCalculate;
+        LOGGER.info("averageRam of the first "+phonesToCalculate+" phones: "+averageRam);
     }
 
     public static void exceptionOccurs(int p, ArrayList<Phone> pl, int ptc) throws InvalidIntScanner{

@@ -1,4 +1,4 @@
-package com.solvd.PhonesHierarchyMaven.phone.customList;
+package main.java.com.solvd.PhonesHierarchyMaven.phone.customList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,7 +1,7 @@
-package com.solvd.PhonesHierarchyMaven.phone.features;
+package main.java.com.solvd.PhonesHierarchyMaven.phone.features;
 
-import com.solvd.PhonesHierarchyMaven.phone.exceptions.BatteryCapacityException;
-import com.solvd.PhonesHierarchyMaven.phone.exceptions.BatteryStateException;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.BatteryCapacityException;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.BatteryStateException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
