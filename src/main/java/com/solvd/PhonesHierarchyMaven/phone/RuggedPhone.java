@@ -1,5 +1,7 @@
 package main.java.com.solvd.PhonesHierarchyMaven.phone;
 
+import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,11 +11,12 @@ public final class RuggedPhone extends SmartPhone{
     private static final Logger LOGGER = LogManager.getLogger(RuggedPhone.class);
     private String typeRuggedPhone;
 
-    public RuggedPhone(String brand, String model, int batteryCapacity, int batteryState, int cameraResolutionMP, String chargeConnectivity, double displayInchesSize, String CPU, int storageGB, int ramGB, String operatingSystem, boolean dualSim, String typeRuggedPhone, long phoneNumber, double price, double weight) {
-        super(brand, model, batteryCapacity, batteryState, cameraResolutionMP, chargeConnectivity, displayInchesSize, CPU, storageGB, ramGB, operatingSystem, dualSim, phoneNumber, price, weight);
+    public RuggedPhone(Brand brandEnum, ChargingConnection chargingConnectionEnum,
+                       String model, int batteryCapacity, int batteryState, int cameraResolutionMP, double displayInchesSize, String CPU, int storageGB, int ramGB, String operatingSystem, boolean dualSim, String typeRuggedPhone, long phoneNumber, double price, double weight) {
+        super(brandEnum,chargingConnectionEnum, model, batteryCapacity, batteryState, cameraResolutionMP, displayInchesSize, CPU, storageGB, ramGB, operatingSystem, dualSim, phoneNumber, price, weight);
         this.typeRuggedPhone = typeRuggedPhone;
     }
-    public RuggedPhone(String brand, String model, String CPU, String operatingSystem, String typeRuggedPhone) {
+    public RuggedPhone(Brand brand, String model, String CPU, String operatingSystem, String typeRuggedPhone) {
         super(brand, model, CPU, operatingSystem);
         this.typeRuggedPhone = typeRuggedPhone;
     }
@@ -28,7 +31,7 @@ public final class RuggedPhone extends SmartPhone{
 
     @Override
     public void alarm() {
-        LOGGER.info("Alarm from RuggedPhone: "+this.getBrand()+" "+this.getModel());
+        LOGGER.info("Alarm from RuggedPhone: "+this.getBrandEnum().getName()+" "+this.getModel());
     }
 
     @Override
@@ -52,8 +55,8 @@ public final class RuggedPhone extends SmartPhone{
     }
 
     @Override
-    public void call() {
-        LOGGER.info("Calling from RuggedPhone");
+    public void callTo(String contact) {
+        LOGGER.info("Calling from RuggedPhone to "+contact);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package main.java.com.solvd.PhonesHierarchyMaven.phone.features;
 
+import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.PeripheralType;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.BatteryCapacityException;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.BatteryStateException;
 import org.apache.logging.log4j.LogManager;

@@ -1,5 +1,7 @@
 package main.java.com.solvd.PhonesHierarchyMaven.phone;
 
+import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,12 +12,13 @@ public class SmartPhone extends Phone{
     private String operatingSystem;
     private boolean dualSim;
 
-    public SmartPhone(String brand, String model, int batteryCapacity, int batteryState, int cameraResolutionMP, String chargeConnectivity, double displayInchesSize, String CPU, int storageGB, int ramGB, String operatingSystem, boolean dualSim,long phoneNumber, double price, double weight) {
-        super(brand, model, batteryCapacity, batteryState, cameraResolutionMP, chargeConnectivity, displayInchesSize, CPU, storageGB, ramGB, phoneNumber, price, weight);
+    public SmartPhone(Brand brandEnum, ChargingConnection chargingConnection,
+                      String model, int batteryCapacity, int batteryState, int cameraResolutionMP, double displayInchesSize, String CPU, int storageGB, int ramGB, String operatingSystem, boolean dualSim, long phoneNumber, double price, double weight) {
+        super(brandEnum,chargingConnection, model, batteryCapacity, batteryState, cameraResolutionMP, displayInchesSize, CPU, storageGB, ramGB, phoneNumber, price, weight);
         this.operatingSystem = operatingSystem;
         this.dualSim = dualSim;
     }
-    public SmartPhone(String brand, String model, String CPU, String operatingSystem) {
+    public SmartPhone(Brand brand, String model, String CPU, String operatingSystem) {
         super(brand, model, CPU);
         this.operatingSystem = operatingSystem;
     }
@@ -76,8 +79,8 @@ public class SmartPhone extends Phone{
     }
 
     @Override
-    public void call() {
-        LOGGER.info("Calling from SmartPhone");
+    public void callTo(String contact) {
+        LOGGER.info("Calling from SmartPhone to "+contact);
     }
 
     @Override

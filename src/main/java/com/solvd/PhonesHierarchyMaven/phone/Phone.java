@@ -1,15 +1,19 @@
 package main.java.com.solvd.PhonesHierarchyMaven.phone;
 
+import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.*;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.features.*;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.*;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambda_functions.ICall;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.lang.reflect.GenericArrayType;
 import java.security.InvalidParameterException;
 import java.util.*;
 
-public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPicture, IRecordAVideo, ITurnOn {
+public abstract class Phone implements ICharge, ICall<String>, ISaveContact, ITakeAPicture, IRecordAVideo, ITurnOn {
     private static final Logger LOGGER = LogManager.getLogger(Phone.class);
     private static int ObjectsPhoneCreated;
 
@@ -56,9 +60,6 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
     public void setApps(Set<String> apps) {
         this.apps = apps;
     }
-
-    public abstract void call();
-
     public abstract void charge();
 
     @Override
@@ -67,30 +68,30 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
     }
 
     public void showContactList(){
-        LOGGER.info("ContactList "+model+" "+brand+": ");
+        LOGGER.info("ContactList "+model+" "+brandEnum.getName()+": ");
         contactList.forEach((k,v) -> LOGGER.info(k+": "+v));
     }
 
     public void showPicturesNamesList(){
-        LOGGER.info("PicturesNamesList "+model+" "+brand+": ");
+        LOGGER.info("PicturesNamesList "+model+" "+brandEnum.getName()+": ");
         picturesNamesList.forEach(LOGGER::info);
     }
 
     public void showVideosNamesList(){
-        LOGGER.info("VideosNamesList "+model+" "+brand+": ");
+        LOGGER.info("VideosNamesList "+model+" "+brandEnum.getName()+": ");
         videosNamesList.forEach(LOGGER::info);
     }
 
     public void showApps() {
-        LOGGER.info("Apps "+brand+" "+model+": ");
+        LOGGER.info("Apps "+brandEnum.getName()+" "+model+": ");
         apps.forEach(LOGGER::info);
     }
 
-    private final String brand;
+    private ChargingConnection chargingConnectionEnum;
+    private Brand brandEnum;
     private final String model;
     private Battery battery;
     private Camera camera;
-    private Connectivity connectivity;
     private Display display;
     private Processor processor;
     private StorageMemory storageMemory;
@@ -112,9 +113,11 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
             throw new InvalidWeightException();
     }
 
-    public Phone(String brand, String model, int batteryCapacity, int batteryState, int cameraResolutionMP, String chargeConnectivity, double displayInchesSize, String CPU, int storageGB, double ramGB,
+    public Phone(Brand brandEnum, ChargingConnection chargingConnectionEnum, String model, int batteryCapacity, int batteryState, int cameraResolutionMP, double displayInchesSize, String CPU, int storageGB, double ramGB,
                  long phoneNumber, double price, double weight) {
-        this.brand = brand;
+        this.chargingConnectionEnum = chargingConnectionEnum;
+        this.brandEnum = brandEnum;
+
         this.model = model;
         try {
             exceptionOccurs(batteryCapacity, batteryState, cameraResolutionMP, price, weight);
@@ -131,7 +134,6 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
         }
         this.battery = new Battery(batteryCapacity, batteryState);
         this.camera = new Camera(cameraResolutionMP);
-        this.connectivity = new Connectivity(chargeConnectivity);
         this.display = new Display(displayInchesSize);
         this.processor = new Processor(CPU);
         this.storageMemory = new StorageMemory(storageGB, ramGB);
@@ -141,8 +143,15 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
         ObjectsPhoneCreated++;
     }
 
-    public Phone(String brand, String model, String CPU) {
-        this.brand = brand;
+    public ChargingConnection getChargingConnectionEnum() {
+        return (ChargingConnection) chargingConnectionEnum;
+    }
+    public Brand getBrandEnum() {
+        return (Brand) brandEnum;
+    }
+
+    public Phone(Brand brandEnum, String model, String CPU) {
+        this.brandEnum = brandEnum;
         this.model = model;
         this.processor = new Processor(CPU);
         ObjectsPhoneCreated++;
@@ -150,10 +159,6 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
 
     public static int getObjectsPhoneCreated() {
         return ObjectsPhoneCreated;
-    }
-
-    public String getBrand() {
-        return brand;
     }
 
     public String getModel() {
@@ -174,14 +179,6 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
 
     public void setCamera(Camera camera) {
         this.camera = camera;
-    }
-
-    public Connectivity getConnectivity() {
-        return connectivity;
-    }
-
-    public void setConnectivity(Connectivity connectivity) {
-        this.connectivity = connectivity;
     }
 
     public Display getDisplay() {
@@ -251,10 +248,10 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
 
     @Override
     public String toString() {
-        return "Phone " + brand + " " + model + "\n" +
+        return "Phone " + brandEnum.getName() + " " + model + "\n" +
                 "\t" + battery + "\n" +
                 "\t" + camera.toString()+ "\n" +
-                "\t" + connectivity.toString() + "\n" +
+                "\t" + chargingConnectionEnum.getConnection() + "\n" +
                 "\t" + display.toString() + "\n" +
                 "\t" + processor.toString() + "\n" +
                 "\t" + storageMemory.toString() + "\n";
@@ -265,12 +262,12 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Phone phone = (Phone) o;
-        return phoneNumber == phone.phoneNumber && Double.compare(price, phone.price) == 0 && Double.compare(weight, phone.weight) == 0 && Objects.equals(brand, phone.brand) && Objects.equals(model, phone.model) && Objects.equals(battery, phone.battery) && Objects.equals(camera, phone.camera) && Objects.equals(connectivity, phone.connectivity) && Objects.equals(display, phone.display) && Objects.equals(processor, phone.processor) && Objects.equals(storageMemory, phone.storageMemory);
+        return phoneNumber == phone.phoneNumber && Double.compare(price, phone.price) == 0 && Double.compare(weight, phone.weight) == 0 && Objects.equals(contactList, phone.contactList) && Objects.equals(picturesNamesList, phone.picturesNamesList) && Objects.equals(videosNamesList, phone.videosNamesList) && Objects.equals(apps, phone.apps) && chargingConnectionEnum == phone.chargingConnectionEnum && brandEnum == phone.brandEnum && Objects.equals(model, phone.model) && Objects.equals(battery, phone.battery) && Objects.equals(camera, phone.camera) && Objects.equals(display, phone.display) && Objects.equals(processor, phone.processor) && Objects.equals(storageMemory, phone.storageMemory);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(brand, model, battery, camera, connectivity, display, processor, storageMemory, phoneNumber, price, weight);
+        return Objects.hash(contactList, picturesNamesList, videosNamesList, apps, chargingConnectionEnum, brandEnum, model, battery, camera, display, processor, storageMemory, phoneNumber, price, weight);
     }
 
     public abstract void printExtraInformation();
@@ -278,12 +275,11 @@ public abstract class Phone implements ICharge, ICall, ISaveContact, ITakeAPictu
     public abstract void expensivePhone();
 
     public final String phoneName(){
-        return brand+" "+model;
+        return brandEnum.getName()+" "+model;
     }
 
     public void installApp(String appName){
-        LOGGER.info("App "+appName+" installed in "+brand+" "+model);
+        LOGGER.info("App "+appName+" installed in "+brandEnum.getName()+" "+model);
         apps.add(appName);
     }
-
 }

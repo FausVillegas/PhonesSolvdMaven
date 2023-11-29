@@ -1,5 +1,7 @@
 package main.java.com.solvd.PhonesHierarchyMaven.phone;
 
+import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -31,11 +33,12 @@ public final class GamingPhone extends SmartPhone{
         this.videoGames = videoGames;
     }
 
-    public GamingPhone(String brand, String model, int batteryCapacity, int batteryState, int cameraResolutionMP, String chargeConnectivity, double displayInchesSize, String CPU, int storageGB, int ramGB, String operatingSystem, boolean dualSim, boolean gamingMode, long phoneNumber, double price, double weight) {
-        super(brand, model, batteryCapacity, batteryState, cameraResolutionMP, chargeConnectivity, displayInchesSize, CPU, storageGB, ramGB, operatingSystem, dualSim, phoneNumber, price, weight);
+    public GamingPhone(Brand brandEnum, ChargingConnection chargingConnectionEnum,
+                       String model, int batteryCapacity, int batteryState, int cameraResolutionMP, double displayInchesSize, String CPU, int storageGB, int ramGB, String operatingSystem, boolean dualSim, boolean gamingMode, long phoneNumber, double price, double weight) {
+        super(brandEnum,chargingConnectionEnum, model, batteryCapacity, batteryState, cameraResolutionMP, displayInchesSize, CPU, storageGB, ramGB, operatingSystem, dualSim, phoneNumber, price, weight);
         this.gamingMode = gamingMode;
     }
-    public GamingPhone(String brand, String model, String CPU, String operatingSystem) {
+    public GamingPhone(Brand brand, String model, String CPU, String operatingSystem) {
         super(brand, model, CPU, operatingSystem);
     }
 
@@ -73,8 +76,8 @@ public final class GamingPhone extends SmartPhone{
     }
 
     @Override
-    public void call() {
-        LOGGER.info("Calling from GamingPhone");
+    public void callTo(String contact) {
+        LOGGER.info("Calling from GamingPhone to "+contact);
     }
 
     @Override
