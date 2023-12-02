@@ -1,0 +1,88 @@
+2023-12-01 20:16:04,999 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-01 20:16:05,047 INFO m.j.c.s.P.Main [main] Class: main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 20:16:05,049 INFO m.j.c.s.P.Main [main] -----------Fields------------
+2023-12-01 20:16:05,062 INFO m.j.c.s.P.Main [main] NAME = LOGGER TYPE = interface org.apache.logging.log4j.Logger MODIFIERS = private static final
+2023-12-01 20:16:05,063 INFO m.j.c.s.P.Main [main] NAME = ObjectsPhoneCreated TYPE = int MODIFIERS = private static
+2023-12-01 20:16:05,065 INFO m.j.c.s.P.Main [main] NAME = contactList TYPE = interface java.util.Map MODIFIERS = private
+2023-12-01 20:16:05,068 INFO m.j.c.s.P.Main [main] NAME = picturesNamesList TYPE = interface java.util.List MODIFIERS = private
+2023-12-01 20:16:05,069 INFO m.j.c.s.P.Main [main] NAME = videosNamesList TYPE = interface java.util.List MODIFIERS = private
+2023-12-01 20:16:05,070 INFO m.j.c.s.P.Main [main] NAME = apps TYPE = interface java.util.Set MODIFIERS = private
+2023-12-01 20:16:05,071 INFO m.j.c.s.P.Main [main] NAME = chargingConnectionEnum TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection MODIFIERS = private
+2023-12-01 20:16:05,072 INFO m.j.c.s.P.Main [main] NAME = brandEnum TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand MODIFIERS = private
+2023-12-01 20:16:05,074 INFO m.j.c.s.P.Main [main] NAME = model TYPE = class java.lang.String MODIFIERS = private final
+2023-12-01 20:16:05,075 INFO m.j.c.s.P.Main [main] NAME = battery TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Battery MODIFIERS = private
+2023-12-01 20:16:05,077 INFO m.j.c.s.P.Main [main] NAME = camera TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Camera MODIFIERS = private
+2023-12-01 20:16:05,079 INFO m.j.c.s.P.Main [main] NAME = display TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Display MODIFIERS = private
+2023-12-01 20:16:05,080 INFO m.j.c.s.P.Main [main] NAME = processor TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Processor MODIFIERS = private
+2023-12-01 20:16:05,082 INFO m.j.c.s.P.Main [main] NAME = storageMemory TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.StorageMemory MODIFIERS = private
+2023-12-01 20:16:05,083 INFO m.j.c.s.P.Main [main] NAME = phoneNumber TYPE = long MODIFIERS = protected
+2023-12-01 20:16:05,084 INFO m.j.c.s.P.Main [main] NAME = price TYPE = double MODIFIERS = protected
+2023-12-01 20:16:05,085 INFO m.j.c.s.P.Main [main] NAME = weight TYPE = double MODIFIERS = protected
+2023-12-01 20:16:05,086 INFO m.j.c.s.P.Main [main] -----------Constructors------------
+2023-12-01 20:16:05,097 INFO m.j.c.s.P.Main [main] CONSTRUCTOR NAME = main.java.com.solvd.PhonesHierarchyMaven.phone.Phone	 It has 13 parameter/s
+2023-12-01 20:16:05,098 INFO m.j.c.s.P.Main [main] 	 PARAMETERS: 
+2023-12-01 20:16:05,100 INFO m.j.c.s.P.Main [main] 		arg0 class main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand
+2023-12-01 20:16:05,101 INFO m.j.c.s.P.Main [main] 		arg1 class main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection
+2023-12-01 20:16:05,102 INFO m.j.c.s.P.Main [main] 		arg2 class java.lang.String
+2023-12-01 20:16:05,103 INFO m.j.c.s.P.Main [main] 		arg3 int
+2023-12-01 20:16:05,104 INFO m.j.c.s.P.Main [main] 		arg4 int
+2023-12-01 20:16:05,105 INFO m.j.c.s.P.Main [main] 		arg5 int
+2023-12-01 20:16:05,106 INFO m.j.c.s.P.Main [main] 		arg6 double
+2023-12-01 20:16:05,107 INFO m.j.c.s.P.Main [main] 		arg7 class java.lang.String
+2023-12-01 20:16:05,108 INFO m.j.c.s.P.Main [main] 		arg8 int
+2023-12-01 20:16:05,109 INFO m.j.c.s.P.Main [main] 		arg9 double
+2023-12-01 20:16:05,110 INFO m.j.c.s.P.Main [main] 		arg10 long
+2023-12-01 20:16:05,110 INFO m.j.c.s.P.Main [main] 		arg11 double
+2023-12-01 20:16:05,112 INFO m.j.c.s.P.Main [main] 		arg12 double
+2023-12-01 20:16:05,113 INFO m.j.c.s.P.Main [main] CONSTRUCTOR NAME = main.java.com.solvd.PhonesHierarchyMaven.phone.Phone	 It has 3 parameter/s
+2023-12-01 20:16:05,115 INFO m.j.c.s.P.Main [main] 	 PARAMETERS: 
+2023-12-01 20:16:05,117 INFO m.j.c.s.P.Main [main] 		arg0 class main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand
+2023-12-01 20:16:05,119 INFO m.j.c.s.P.Main [main] 		arg1 class java.lang.String
+2023-12-01 20:16:05,120 INFO m.j.c.s.P.Main [main] 		arg2 class java.lang.String
+2023-12-01 20:16:05,122 INFO m.j.c.s.P.Main [main] -----------Methods------------
+2023-12-01 20:16:05,124 INFO m.j.c.s.P.Main [main] METHOD NAME = getContactList	 MODIFIERS = public
+2023-12-01 20:16:05,126 INFO m.j.c.s.P.Main [main] METHOD NAME = setProcessor	 MODIFIERS = public
+2023-12-01 20:16:05,127 INFO m.j.c.s.P.Main [main] METHOD NAME = printNumber	 MODIFIERS = protected
+2023-12-01 20:16:05,128 INFO m.j.c.s.P.Main [main] METHOD NAME = setContactList	 MODIFIERS = public
+2023-12-01 20:16:05,131 INFO m.j.c.s.P.Main [main] METHOD NAME = getVideosNamesList	 MODIFIERS = public
+2023-12-01 20:16:05,132 INFO m.j.c.s.P.Main [main] METHOD NAME = setPhoneNumber	 MODIFIERS = public
+2023-12-01 20:16:05,134 INFO m.j.c.s.P.Main [main] METHOD NAME = expensivePhone	 MODIFIERS = public abstract
+2023-12-01 20:16:05,135 INFO m.j.c.s.P.Main [main] METHOD NAME = getPhoneNumber	 MODIFIERS = public
+2023-12-01 20:16:05,136 INFO m.j.c.s.P.Main [main] METHOD NAME = getProcessor	 MODIFIERS = public
+2023-12-01 20:16:05,137 INFO m.j.c.s.P.Main [main] METHOD NAME = setStorageMemory	 MODIFIERS = public
+2023-12-01 20:16:05,138 INFO m.j.c.s.P.Main [main] METHOD NAME = setVideosNamesList	 MODIFIERS = public
+2023-12-01 20:16:05,140 INFO m.j.c.s.P.Main [main] METHOD NAME = getStorageMemory	 MODIFIERS = public
+2023-12-01 20:16:05,141 INFO m.j.c.s.P.Main [main] METHOD NAME = getBrandEnum	 MODIFIERS = public
+2023-12-01 20:16:05,142 INFO m.j.c.s.P.Main [main] METHOD NAME = saveContact	 MODIFIERS = public
+2023-12-01 20:16:05,143 INFO m.j.c.s.P.Main [main] METHOD NAME = showContactList	 MODIFIERS = public
+2023-12-01 20:16:05,145 INFO m.j.c.s.P.Main [main] METHOD NAME = exceptionOccurs	 MODIFIERS = public static
+2023-12-01 20:16:05,147 INFO m.j.c.s.P.Main [main] METHOD NAME = installApp	 MODIFIERS = public
+2023-12-01 20:16:05,148 INFO m.j.c.s.P.Main [main] METHOD NAME = showApps	 MODIFIERS = public
+2023-12-01 20:16:05,149 INFO m.j.c.s.P.Main [main] METHOD NAME = getPrice	 MODIFIERS = public
+2023-12-01 20:16:05,150 INFO m.j.c.s.P.Main [main] METHOD NAME = getCamera	 MODIFIERS = public
+2023-12-01 20:16:05,152 INFO m.j.c.s.P.Main [main] METHOD NAME = getBattery	 MODIFIERS = public
+2023-12-01 20:16:05,154 INFO m.j.c.s.P.Main [main] METHOD NAME = setBattery	 MODIFIERS = public
+2023-12-01 20:16:05,156 INFO m.j.c.s.P.Main [main] METHOD NAME = setWeight	 MODIFIERS = public
+2023-12-01 20:16:05,158 INFO m.j.c.s.P.Main [main] METHOD NAME = setApps	 MODIFIERS = public
+2023-12-01 20:16:05,159 INFO m.j.c.s.P.Main [main] METHOD NAME = getApps	 MODIFIERS = public
+2023-12-01 20:16:05,160 INFO m.j.c.s.P.Main [main] METHOD NAME = setCamera	 MODIFIERS = public
+2023-12-01 20:16:05,161 INFO m.j.c.s.P.Main [main] METHOD NAME = charge	 MODIFIERS = public abstract
+2023-12-01 20:16:05,162 INFO m.j.c.s.P.Main [main] METHOD NAME = getDisplay	 MODIFIERS = public
+2023-12-01 20:16:05,163 INFO m.j.c.s.P.Main [main] METHOD NAME = setDisplay	 MODIFIERS = public
+2023-12-01 20:16:05,164 INFO m.j.c.s.P.Main [main] METHOD NAME = getWeight	 MODIFIERS = public
+2023-12-01 20:16:05,165 INFO m.j.c.s.P.Main [main] METHOD NAME = getModel	 MODIFIERS = public
+2023-12-01 20:16:05,166 INFO m.j.c.s.P.Main [main] METHOD NAME = phoneName	 MODIFIERS = public final
+2023-12-01 20:16:05,167 INFO m.j.c.s.P.Main [main] METHOD NAME = setPrice	 MODIFIERS = public
+2023-12-01 20:16:05,168 INFO m.j.c.s.P.Main [main] METHOD NAME = alarm	 MODIFIERS = public abstract
+2023-12-01 20:16:05,169 INFO m.j.c.s.P.Main [main] METHOD NAME = getObjectsPhoneCreated	 MODIFIERS = public static
+2023-12-01 20:16:05,170 INFO m.j.c.s.P.Main [main] METHOD NAME = getChargingConnectionEnum	 MODIFIERS = public
+2023-12-01 20:16:05,170 INFO m.j.c.s.P.Main [main] METHOD NAME = showVideosNamesList	 MODIFIERS = public
+2023-12-01 20:16:05,171 INFO m.j.c.s.P.Main [main] METHOD NAME = showPicturesNamesList	 MODIFIERS = public
+2023-12-01 20:16:05,172 INFO m.j.c.s.P.Main [main] METHOD NAME = priceHigherThan1000	 MODIFIERS = protected
+2023-12-01 20:16:05,173 INFO m.j.c.s.P.Main [main] METHOD NAME = printExtraInformation	 MODIFIERS = public abstract
+2023-12-01 20:16:05,174 INFO m.j.c.s.P.Main [main] METHOD NAME = lambda$showContactList$0	 MODIFIERS = private static
+2023-12-01 20:16:05,175 INFO m.j.c.s.P.Main [main] METHOD NAME = getPicturesNamesList	 MODIFIERS = public
+2023-12-01 20:16:05,176 INFO m.j.c.s.P.Main [main] METHOD NAME = setPicturesNamesList	 MODIFIERS = public
+2023-12-01 20:16:05,177 INFO m.j.c.s.P.Main [main] METHOD NAME = equals	 MODIFIERS = public
+2023-12-01 20:16:05,178 INFO m.j.c.s.P.Main [main] METHOD NAME = toString	 MODIFIERS = public
+2023-12-01 20:16:05,179 INFO m.j.c.s.P.Main [main] METHOD NAME = hashCode	 MODIFIERS = public

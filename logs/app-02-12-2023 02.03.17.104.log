@@ -1,0 +1,19 @@
+2023-12-02 02:03:17,620 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-02 02:03:17,664 INFO m.j.c.s.P.p.Phone [main] App ig installed in Asus ROGPhone6DUltimate
+2023-12-02 02:03:17,665 INFO m.j.c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-12-02 02:03:17,675 INFO m.j.c.s.P.Main [main] 3 phones have no Apps
+2023-12-02 02:03:17,677 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic1
+2023-12-02 02:03:17,678 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic2
+2023-12-02 02:03:17,680 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic3
+2023-12-02 02:03:17,681 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic4
+2023-12-02 02:03:17,683 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic5
+2023-12-02 02:03:17,686 INFO m.j.c.s.P.Main [main] CAT S62 PRO took 5 or more photos
+2023-12-02 02:03:17,697 INFO m.j.c.s.P.p.SmartPhone [main] Contact saved in SmartPhone: Fausto 11111111
+2023-12-02 02:03:17,698 INFO m.j.c.s.P.Main [main] Fausto's number: Optional[11111111]
+2023-12-02 02:03:17,711 INFO m.j.c.s.P.Main [main] Average phone price: 760.0
+2023-12-02 02:03:17,715 INFO m.j.c.s.P.Main [main] Weight sum: 730.0
+2023-12-02 02:03:17,735 INFO m.j.c.s.P.Main [main] Phone number: 444444 NOKIA 5310
+2023-12-02 02:03:17,736 INFO m.j.c.s.P.Main [main] Phone number: 3333333 CAT S62 PRO
+2023-12-02 02:03:17,737 INFO m.j.c.s.P.Main [main] Phone number: 3334444 CAT S62 PRO
+2023-12-02 02:03:17,738 INFO m.j.c.s.P.Main [main] Phone number: 22222222 ASUS ROGPhone6DUltimate
+2023-12-02 02:03:17,739 INFO m.j.c.s.P.Main [main] Phone number: 1111111111 SAMSUNG S22

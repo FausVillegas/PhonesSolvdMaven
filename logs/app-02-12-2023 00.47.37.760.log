@@ -1,0 +1,17 @@
+2023-12-02 00:47:38,306 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-02 00:47:38,364 INFO m.j.c.s.P.p.Phone [main] App ig installed in Asus ROGPhone6DUltimate
+2023-12-02 00:47:38,365 INFO m.j.c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-12-02 00:47:38,377 INFO m.j.c.s.P.Main [main] 3 phones have no Apps
+2023-12-02 00:47:38,378 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic1
+2023-12-02 00:47:38,380 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic2
+2023-12-02 00:47:38,382 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic3
+2023-12-02 00:47:38,383 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic4
+2023-12-02 00:47:38,384 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic5
+2023-12-02 00:47:38,387 INFO m.j.c.s.P.Main [main] CAT S62 PRO took 5 or more photos
+2023-12-02 00:47:38,399 INFO m.j.c.s.P.p.SmartPhone [main] Contact saved in SmartPhone: Fausto 11111111
+2023-12-02 00:47:38,400 INFO m.j.c.s.P.Main [main] Fausto's number: Optional[11111111]
+2023-12-02 00:47:38,425 INFO m.j.c.s.P.Main [main] Phone number: 444444 NOKIA 5310
+2023-12-02 00:47:38,427 INFO m.j.c.s.P.Main [main] Phone number: 3333333 CAT S62 PRO
+2023-12-02 00:47:38,428 INFO m.j.c.s.P.Main [main] Phone number: 3333333 CAT S62 PRO
+2023-12-02 00:47:38,429 INFO m.j.c.s.P.Main [main] Phone number: 22222222 ASUS ROGPhone6DUltimate
+2023-12-02 00:47:38,431 INFO m.j.c.s.P.Main [main] Phone number: 1111111111 SAMSUNG S22

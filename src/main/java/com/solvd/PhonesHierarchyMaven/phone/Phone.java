@@ -5,11 +5,10 @@ import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.*;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.features.*;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.*;
-import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambda_functions.ICall;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambdafunctions.ICall;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.lang.reflect.GenericArrayType;
 import java.security.InvalidParameterException;
 import java.util.*;
 

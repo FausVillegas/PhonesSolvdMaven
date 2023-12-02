@@ -1,0 +1,11 @@
+2023-12-01 22:55:50,696 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-01 22:55:50,744 INFO m.j.c.s.P.p.Phone [main] App ig installed in Asus ROGPhone6DUltimate
+2023-12-01 22:55:50,745 INFO m.j.c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-12-01 22:55:50,755 INFO m.j.c.s.P.Main [main] 3 phones have no Apps
+2023-12-01 22:55:50,756 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic1
+2023-12-01 22:55:50,757 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic2
+2023-12-01 22:55:50,759 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic3
+2023-12-01 22:55:50,760 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic4
+2023-12-01 22:55:50,761 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic5
+2023-12-01 22:55:50,765 INFO m.j.c.s.P.Main [main] CAT S62 PRO took 5 or more photos
+2023-12-01 22:55:50,766 INFO m.j.c.s.P.Main [main] Fausto's number: Optional.empty

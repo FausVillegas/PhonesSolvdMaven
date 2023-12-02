@@ -1,0 +1,69 @@
+2023-11-30 11:15:45,849 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-11-30 11:15:45,902 INFO m.j.c.s.P.Main [main] logger infooo
+2023-11-30 11:15:45,902 DEBUG m.j.c.s.P.Main [main] logger debugg
+2023-11-30 11:15:45,904 ERROR m.j.c.s.P.Main [main] logger errorr
+2023-11-30 11:15:45,908 INFO m.j.c.s.P.Main [main] CAT
+2023-11-30 11:15:45,909 INFO m.j.c.s.P.Main [main] Samsung
+2023-11-30 11:15:45,910 INFO m.j.c.s.P.Main [main] Nokia
+2023-11-30 11:15:45,912 INFO m.j.c.s.P.Main [main] Asus
+2023-11-30 11:15:45,915 INFO m.j.c.s.P.Main [main] true
+2023-11-30 11:15:45,932 INFO m.j.c.s.P.Main [main] 760.0
+2023-11-30 11:15:45,937 INFO m.j.c.s.P.Main [main] 2
+2023-11-30 11:15:46,008 INFO m.j.c.s.P.Main [main] Phone Samsung S22
+	Battery{capacityMah=4000, batteryState=30}
+	Camera{peripheralType= INPUTrearCameraResolution=50MP}
+	USB-C
+	Display{peripheralType= OUTPUTsize=6.1"}
+	Processor{peripheralType= INPUT_OUTPUTCPU='Octa-Core'}
+	StorageMemory{peripheralType= INPUT_OUTPUTstorage=128GB, RAM=8.0GB}
+	OperatingSystem=Android
+	DualSim=true
+
+2023-11-30 11:15:46,010 INFO m.j.c.s.P.Main [main] Phone Asus ROGPhone6DUltimate
+	Battery{capacityMah=6000, batteryState=40}
+	Camera{peripheralType= INPUTrearCameraResolution=50MP}
+	USB-C
+	Display{peripheralType= OUTPUTsize=6.78"}
+	Processor{peripheralType= INPUT_OUTPUTCPU='Mali-G710'}
+	StorageMemory{peripheralType= INPUT_OUTPUTstorage=512GB, RAM=16.0GB}
+	OperatingSystem=Android 12
+	DualSim=true
+	GamingMode=true
+
+2023-11-30 11:15:46,012 INFO m.j.c.s.P.Main [main] Phone CAT S62 PRO
+	Battery{capacityMah=4000, batteryState=0}
+	Camera{peripheralType= INPUTrearCameraResolution=12MP}
+	USB-C
+	Display{peripheralType= OUTPUTsize=5.7"}
+	Processor{peripheralType= INPUT_OUTPUTCPU='Snapdragon 660'}
+	StorageMemory{peripheralType= INPUT_OUTPUTstorage=128GB, RAM=6.0GB}
+	OperatingSystem=Android
+	DualSim=false
+	Type of RuggerPhone='Military' 
+
+2023-11-30 11:15:46,013 INFO m.j.c.s.P.Main [main] Phone CAT S62 PRO
+	Battery{capacityMah=4000, batteryState=0}
+	Camera{peripheralType= INPUTrearCameraResolution=12MP}
+	USB-C
+	Display{peripheralType= OUTPUTsize=5.7"}
+	Processor{peripheralType= INPUT_OUTPUTCPU='Snapdragon 660'}
+	StorageMemory{peripheralType= INPUT_OUTPUTstorage=128GB, RAM=6.0GB}
+	OperatingSystem=Android
+	DualSim=false
+	Type of RuggerPhone='Military' 
+
+2023-11-30 11:15:46,039 INFO m.j.c.s.P.Main [main] Phone Nokia 5310
+	Battery{capacityMah=1200, batteryState=100}
+	Camera{peripheralType= INPUTrearCameraResolution=5MP}
+	MicroUSB
+	Display{peripheralType= OUTPUTsize=2.4"}
+	Processor{peripheralType= INPUT_OUTPUTCPU='MT6260A'}
+	StorageMemory{peripheralType= INPUT_OUTPUTstorage=16GB, RAM=0.016GB}
+	PhysicalKeyboard=true
+	InternetCapability=false
+2023-11-30 11:15:46,041 INFO m.j.c.s.P.p.SmartPhone [main] Calling from SmartPhone to Fausto Villegas
+2023-11-30 11:15:46,042 INFO m.j.c.s.P.p.f.StorageMemory [main] The memory receives information: Information received
+2023-11-30 11:15:46,044 INFO m.j.c.s.P.p.f.StorageMemory [main] The memory sends the information: Information sent
+2023-11-30 11:15:46,045 INFO m.j.c.s.P.Main [main] Samsung
+2023-11-30 11:15:46,046 INFO m.j.c.s.P.Main [main] USB-C
+2023-11-30 11:15:46,047 INFO m.j.c.s.P.Main [main] Receives information

@@ -1,8 +1,8 @@
 package main.java.com.solvd.PhonesHierarchyMaven.phone.features;
 
 import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.PeripheralType;
-import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambda_functions.IReceivesInformation;
-import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambda_functions.ISendsInformation;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambdafunctions.IReceivesInformation;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambdafunctions.ISendsInformation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

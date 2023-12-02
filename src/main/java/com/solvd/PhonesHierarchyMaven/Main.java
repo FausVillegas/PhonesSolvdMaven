@@ -5,8 +5,6 @@ import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.InvalidIntScanner;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.*;
-import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambda_functions.ICall;
-import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,6 +13,7 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.*;
 import java.nio.charset.Charset;
 import java.util.*;
 import java.util.function.Consumer;
@@ -22,23 +21,20 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-public class Main {
+public class Main{
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
         //with all the information
-        Phone samsungS22 = new SmartPhone(Brand.SAMSUNG,ChargingConnection.USBC, "S22", 4000, 30, 50, 6.1, "Octa-Core", 128, 8, "Android", true, 1111111111, 900, 130);
+        Phone samsungS22 = new SmartPhone(Brand.SAMSUNG,ChargingConnection.USBC, "S22", 4000, 30, 50, 6.1, "Octa-Core", 128, 8, "Android", true, 11111111, 900, 130);
         GamingPhone asusRogPhone6DUltimate = new GamingPhone(Brand.ASUS,ChargingConnection.USBC, "ROGPhone6DUltimate", 6000, 40, 50, 6.78, "Mali-G710", 512, 16, "Android 12", true, true, 22222222, 1200, 140);
-        Phone catS62Pro = new RuggedPhone(Brand.CAT, ChargingConnection.USBC, "S62 PRO", 4000, 0, 12, 5.7, "Snapdragon 660", 128, 6, "Android", false, "Military", 3333333, 700, 180);
-        Phone catS62Pro2 = new RuggedPhone(Brand.CAT,ChargingConnection.USBC, "S62 PRO", 4000, 0, 12, 5.7, "Snapdragon 660", 128, 6, "Android", false, "Military", 3333333, 700, 180);
-        Phone nokia5310 = new FeaturePhone(Brand.NOKIA,ChargingConnection.MICROUSB, "5310", 1200, 100, 5, 2.4, "MT6260A", 16, 0.016, true, false, 444444, 300, 100);
+        Phone catS62Pro = new RuggedPhone(Brand.CAT, ChargingConnection.USBC, "S62 PRO", 4000, 0, 12, 5.7, "Snapdragon 660", 128, 6, "Android", false, "Military", 33333333, 700, 180);
+        Phone catS62Pro2 = new RuggedPhone(Brand.CAT,ChargingConnection.USBC, "S62 PRO", 4000, 0, 12, 5.7, "Snapdragon 660", 128, 6, "Android", false, "Military", 10000000, 700, 180);
+        Phone nokia5310 = new FeaturePhone(Brand.NOKIA,ChargingConnection.MICROUSB, "5310", 1200, 100, 5, 2.4, "MT6260A", 16, 0.016, true, false, 44444444, 300, 100);
+        Phone samsungS23 = new SmartPhone(Brand.SAMSUNG,ChargingConnection.USBC, "S23", 4000, 70, 50, 6.1, "Octa-Core", 128, 8, "Android", true, 12222222, 900, 130);
 
-        ArrayList<Phone> phonesList = new ArrayList<>();
-        phonesList.add(samsungS22);
-        phonesList.add(asusRogPhone6DUltimate);
-        phonesList.add(catS62Pro);
-        phonesList.add(catS62Pro2);
-        phonesList.add(nokia5310);
+        List<Phone> phonesList = Arrays.asList(samsungS22,asusRogPhone6DUltimate,catS62Pro,catS62Pro2,nokia5310,samsungS23);
 
 //        collections(samsungS22,asusRogPhone6DUltimate,catS62Pro,catS62Pro2,nokia5310);
 //
@@ -46,11 +42,127 @@ public class Main {
 //
 //        fileUtils();
 
+//        lambdaFunctionsEnums(phonesList);
+
+        //---------------Collection streaming-----------------------
+
+        asusRogPhone6DUltimate.installApp("ig");
+        samsungS22.installApp("YouTube");
+        long phonesWithoutApps = phonesList.stream()
+                .filter(p -> p.getApps().isEmpty())
+                .count();
+        LOGGER.info(phonesWithoutApps + " phones have no Apps");
+
+        catS62Pro.takeAPicture("pic1");
+        catS62Pro.takeAPicture("pic2");
+        catS62Pro.takeAPicture("pic3");
+        catS62Pro.takeAPicture("pic4");
+        catS62Pro.takeAPicture("pic5");
+        LOGGER.info("Phones with 5 or more photos: ");
+        List<Phone> phonesWithMoreThan5Pics = phonesList.stream()
+                .filter(p -> p.getPicturesNamesList().size()>=5)
+                .toList();
+        phonesWithMoreThan5Pics.forEach(p -> LOGGER.info(p.getBrandEnum()+" "+p.getModel()+" took 5 or more photos"));
+
+        double averagePrice = phonesList.stream()
+                .mapToDouble(Phone::getPrice)
+                .average()
+                .getAsDouble();
+        LOGGER.info("Average phone price: "+averagePrice);
+
+        double weightSum = phonesList.stream()
+                .mapToDouble(Phone::getWeight)
+                .reduce(0,Double::sum);
+        LOGGER.info("Weight sum: "+weightSum);
+
+        LOGGER.info("Phones sorted by phone number");
+        List<Phone> sortedPhones = phonesList.stream()
+                .sorted(Comparator.comparingLong(Phone::getPhoneNumber))
+                .collect(Collectors.toList());
+        sortedPhones.forEach(p -> LOGGER.info("Phone number: " + p.getPhoneNumber() +"\t"+p.phoneName()));
+
+        phonesList.stream()
+                .filter(p->p.getBrandEnum()==Brand.SAMSUNG)
+                .peek(phone -> phone.getBattery().setBatteryState(100))
+                .toList()
+                .forEach(p->LOGGER.info("Samsung "+p.getModel()+" battery charged"));
+        LOGGER.info("Samsung phone batteries 100 percent charged");
+
+        if(phonesList.stream()
+                .noneMatch(p-> p.getVideosNamesList().isEmpty()))
+            LOGGER.info("Every phone has at least one video");
+
+        String contactNameToSearch = "Fausto";
+        samsungS22.saveContact("Fausto",341412342);
+        Optional<Long> contactNumber = Optional.ofNullable(samsungS22.getContactList().get(contactNameToSearch));
+        LOGGER.info(contactNameToSearch+"'s number: "+contactNumber);
+
+//        //----------------Reflection----------------------------
+
+//        LOGGER.info("---------------Reflection---------------");
+//        try{
+//            Class<Phone> phoneClass = Phone.class;
+//            LOGGER.info("Class: "+phoneClass.getName());
+//
+//            // Fields
+//            LOGGER.info("-----------Fields------------");
+//            Field[] fieldList = phoneClass.getDeclaredFields();
+//            for(Field field: fieldList){
+//                LOGGER.info("NAME = " + field.getName()
+//                        + " TYPE = " + field.getType()
+//                        + " MODIFIERS = " + Modifier.toString(field.getModifiers()));
+//            }
+//
+//            //Constructors
+//            LOGGER.info("-----------Constructors------------");
+//            Constructor[] constructors = phoneClass.getConstructors();
+//            for (Constructor constructor : constructors){
+//                Parameter[] parameters = constructor.getParameters();
+//                LOGGER.info("CONSTRUCTOR = "+constructor.getName()+
+//                        "\t with "+parameters.length+" parameter/s"
+//                );
+//                LOGGER.info("\t PARAMETERS: ");
+//                for(Parameter parameter: parameters){
+//                    LOGGER.info("\t\t"+parameter.getName()+" "+parameter.getType());
+//                }
+//            }
+//
+//            //Methods
+//            LOGGER.info("-----------Methods------------");
+//            Method[] methods = phoneClass.getDeclaredMethods();
+//            for(Method method:methods){
+//                LOGGER.info("METHOD NAME = "+method.getName()+
+//                        "\t MODIFIERS = "+Modifier.toString(method.getModifiers())
+//                );
+//            }
+//            LOGGER.info("-------------------------------");
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//        try {
+//            Class<SmartPhone> smartPhoneClass = SmartPhone.class;
+//
+//            //Creating new object using reflection
+//            Constructor<SmartPhone> smartPhoneConstructor = smartPhoneClass.getConstructor(Brand.class, String.class, String.class, String.class);
+//            SmartPhone samsungS23 = smartPhoneConstructor.newInstance(Brand.SAMSUNG,"S23","SnapDragon","Android");
+//
+//            //Calling methods using reflection
+//            Method methodGetModel = smartPhoneClass.getMethod("getModel");
+//            Method methodGetBrand = smartPhoneClass.getMethod("getBrandEnum");
+//            LOGGER.info("Phone brand: "+methodGetBrand.invoke(samsungS23)+" Model: "+methodGetModel.invoke(samsungS23));
+//        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
+//            throw new RuntimeException(e);
+//        }
+    }
+
+    public static void lambdaFunctionsEnums(List<Phone> phonesList){
         //lambda functions
 
         //Consumer
         Set<String> brandsList = phonesList.stream().map(x -> x.getBrandEnum().getName()).collect(Collectors.toSet());
         Consumer<String> print = (String str) -> LOGGER.info(str);
+        LOGGER.info("Brand list:");
         brandsList.forEach(print);
 
         //Predicate
@@ -77,18 +189,17 @@ public class Main {
         };
         printPhonesData.run();
 
-        
-        samsungS22.callTo("Fausto Villegas");
-        samsungS22.getStorageMemory().receivesInformation("Information received");
-        samsungS22.getStorageMemory().sendInformation("Information sent");
+        Phone phone = phonesList.getFirst();
+
+        phone.callTo("Fausto Villegas");
+        phone.getStorageMemory().receivesInformation("Information received");
+        phone.getStorageMemory().sendInformation("Information sent");
 
         //Enums
-        LOGGER.info(samsungS22.getBrandEnum().getName());
-        LOGGER.info(samsungS22.getChargingConnectionEnum().getConnection());
-        LOGGER.info(samsungS22.getCamera().getPeripheralType().getDescription());
-
+        LOGGER.info(phone.getBrandEnum().getName());
+        LOGGER.info(phone.getChargingConnectionEnum().getConnection());
+        LOGGER.info(phone.getCamera().getPeripheralType().getDescription());
     }
-
     public static void fileUtils(){
         // The files strings.txt and output.txt are in the directory: resources
         File stringsFile = new File("src/main/resources/strings.txt");

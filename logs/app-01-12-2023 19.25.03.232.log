@@ -1,0 +1,26 @@
+2023-12-01 19:25:03,762 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-01 19:25:03,812 INFO m.j.c.s.P.p.Phone [main] App ig installed in Asus ROGPhone6DUltimate
+2023-12-01 19:25:03,814 INFO m.j.c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-12-01 19:25:03,823 INFO m.j.c.s.P.Main [main] 3 phones have no Apps
+2023-12-01 19:25:03,825 INFO m.j.c.s.P.Main [main] Class name: main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 19:25:03,836 INFO m.j.c.s.P.Main [main] NAME= LOGGER DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = interface org.apache.logging.log4j.Logger MODIFIERS = private static final
+2023-12-01 19:25:03,838 INFO m.j.c.s.P.Main [main] NAME= ObjectsPhoneCreated DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = int MODIFIERS = private static
+2023-12-01 19:25:03,839 INFO m.j.c.s.P.Main [main] NAME= contactList DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = interface java.util.Map MODIFIERS = private
+2023-12-01 19:25:03,840 INFO m.j.c.s.P.Main [main] NAME= picturesNamesList DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = interface java.util.List MODIFIERS = private
+2023-12-01 19:25:03,842 INFO m.j.c.s.P.Main [main] NAME= videosNamesList DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = interface java.util.List MODIFIERS = private
+2023-12-01 19:25:03,843 INFO m.j.c.s.P.Main [main] NAME= apps DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = interface java.util.Set MODIFIERS = private
+2023-12-01 19:25:03,844 INFO m.j.c.s.P.Main [main] NAME= chargingConnectionEnum DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection MODIFIERS = private
+2023-12-01 19:25:03,845 INFO m.j.c.s.P.Main [main] NAME= brandEnum DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand MODIFIERS = private
+2023-12-01 19:25:03,846 INFO m.j.c.s.P.Main [main] NAME= model DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = class java.lang.String MODIFIERS = private final
+2023-12-01 19:25:03,848 INFO m.j.c.s.P.Main [main] NAME= battery DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Battery MODIFIERS = private
+2023-12-01 19:25:03,849 INFO m.j.c.s.P.Main [main] NAME= camera DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Camera MODIFIERS = private
+2023-12-01 19:25:03,851 INFO m.j.c.s.P.Main [main] NAME= display DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Display MODIFIERS = private
+2023-12-01 19:25:03,853 INFO m.j.c.s.P.Main [main] NAME= processor DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Processor MODIFIERS = private
+2023-12-01 19:25:03,854 INFO m.j.c.s.P.Main [main] NAME= storageMemory DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.StorageMemory MODIFIERS = private
+2023-12-01 19:25:03,855 INFO m.j.c.s.P.Main [main] NAME= phoneNumber DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = long MODIFIERS = protected
+2023-12-01 19:25:03,856 INFO m.j.c.s.P.Main [main] NAME= price DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = double MODIFIERS = protected
+2023-12-01 19:25:03,857 INFO m.j.c.s.P.Main [main] NAME= weight DECL CLASS = class main.java.com.solvd.PhonesHierarchyMaven.phone.Phone TYPE = double MODIFIERS = protected
+2023-12-01 19:25:03,859 INFO m.j.c.s.P.Main [main] main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 19:25:03,861 INFO m.j.c.s.P.Main [main] 	13 parameters
+2023-12-01 19:25:03,862 INFO m.j.c.s.P.Main [main] main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 19:25:03,863 INFO m.j.c.s.P.Main [main] 	3 parameters

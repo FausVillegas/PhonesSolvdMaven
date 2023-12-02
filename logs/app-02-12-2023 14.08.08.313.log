@@ -1,0 +1,25 @@
+2023-12-02 14:08:08,841 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-02 14:08:08,901 INFO m.j.c.s.P.p.Phone [main] App ig installed in Asus ROGPhone6DUltimate
+2023-12-02 14:08:08,902 INFO m.j.c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-12-02 14:08:08,911 INFO m.j.c.s.P.Main [main] 4 phones have no Apps
+2023-12-02 14:08:08,913 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic1
+2023-12-02 14:08:08,914 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic2
+2023-12-02 14:08:08,915 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic3
+2023-12-02 14:08:08,917 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic4
+2023-12-02 14:08:08,918 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic5
+2023-12-02 14:08:08,920 INFO m.j.c.s.P.Main [main] Phones with 5 or more photos: 
+2023-12-02 14:08:08,923 INFO m.j.c.s.P.Main [main] CAT S62 PRO took 5 or more photos
+2023-12-02 14:08:08,936 INFO m.j.c.s.P.Main [main] Average phone price: 783.3333333333334
+2023-12-02 14:08:08,943 INFO m.j.c.s.P.Main [main] Weight sum: 860.0
+2023-12-02 14:08:08,944 INFO m.j.c.s.P.Main [main] Phones sorted by phone number
+2023-12-02 14:08:08,963 INFO m.j.c.s.P.Main [main] Phone number: 10000000	CAT S62 PRO
+2023-12-02 14:08:08,965 INFO m.j.c.s.P.Main [main] Phone number: 11111111	Samsung S22
+2023-12-02 14:08:08,966 INFO m.j.c.s.P.Main [main] Phone number: 12222222	Samsung S23
+2023-12-02 14:08:08,967 INFO m.j.c.s.P.Main [main] Phone number: 22222222	Asus ROGPhone6DUltimate
+2023-12-02 14:08:08,968 INFO m.j.c.s.P.Main [main] Phone number: 33333333	CAT S62 PRO
+2023-12-02 14:08:08,969 INFO m.j.c.s.P.Main [main] Phone number: 44444444	Nokia 5310
+2023-12-02 14:08:08,973 INFO m.j.c.s.P.Main [main] Samsung S22 battery charged
+2023-12-02 14:08:08,974 INFO m.j.c.s.P.Main [main] Samsung S23 battery charged
+2023-12-02 14:08:08,975 INFO m.j.c.s.P.Main [main] Samsung phone batteries 100 percent charged
+2023-12-02 14:08:08,990 INFO m.j.c.s.P.p.SmartPhone [main] Contact saved in SmartPhone: Fausto 341412342
+2023-12-02 14:08:08,991 INFO m.j.c.s.P.Main [main] Fausto's number: Optional[341412342]

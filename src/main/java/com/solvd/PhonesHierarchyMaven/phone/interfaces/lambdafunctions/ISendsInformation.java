@@ -1,4 +1,4 @@
-package main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambda_functions;
+package main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambdafunctions;
 
 @FunctionalInterface
 public interface ISendsInformation<T> {

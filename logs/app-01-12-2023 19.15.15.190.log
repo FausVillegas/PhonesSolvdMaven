@@ -1,0 +1,25 @@
+2023-12-01 19:15:15,692 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-01 19:15:15,734 INFO m.j.c.s.P.p.Phone [main] App ig installed in Asus ROGPhone6DUltimate
+2023-12-01 19:15:15,735 INFO m.j.c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-12-01 19:15:15,744 INFO m.j.c.s.P.Main [main] 3 phones have no Apps
+2023-12-01 19:15:15,745 INFO m.j.c.s.P.Main [main] Class name: main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 19:15:15,747 INFO m.j.c.s.P.Main [main] main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 19:15:15,749 INFO m.j.c.s.P.Main [main] 	arg0
+2023-12-01 19:15:15,751 INFO m.j.c.s.P.Main [main] 	arg1
+2023-12-01 19:15:15,753 INFO m.j.c.s.P.Main [main] 	arg2
+2023-12-01 19:15:15,754 INFO m.j.c.s.P.Main [main] 	3 parameters
+2023-12-01 19:15:15,755 INFO m.j.c.s.P.Main [main] main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 19:15:15,756 INFO m.j.c.s.P.Main [main] 	arg0
+2023-12-01 19:15:15,757 INFO m.j.c.s.P.Main [main] 	arg1
+2023-12-01 19:15:15,757 INFO m.j.c.s.P.Main [main] 	arg2
+2023-12-01 19:15:15,758 INFO m.j.c.s.P.Main [main] 	arg3
+2023-12-01 19:15:15,759 INFO m.j.c.s.P.Main [main] 	arg4
+2023-12-01 19:15:15,759 INFO m.j.c.s.P.Main [main] 	arg5
+2023-12-01 19:15:15,760 INFO m.j.c.s.P.Main [main] 	arg6
+2023-12-01 19:15:15,761 INFO m.j.c.s.P.Main [main] 	arg7
+2023-12-01 19:15:15,762 INFO m.j.c.s.P.Main [main] 	arg8
+2023-12-01 19:15:15,762 INFO m.j.c.s.P.Main [main] 	arg9
+2023-12-01 19:15:15,763 INFO m.j.c.s.P.Main [main] 	arg10
+2023-12-01 19:15:15,763 INFO m.j.c.s.P.Main [main] 	arg11
+2023-12-01 19:15:15,764 INFO m.j.c.s.P.Main [main] 	arg12
+2023-12-01 19:15:15,765 INFO m.j.c.s.P.Main [main] 	13 parameters

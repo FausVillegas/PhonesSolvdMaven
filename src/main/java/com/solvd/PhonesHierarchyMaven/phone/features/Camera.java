@@ -2,7 +2,7 @@ package main.java.com.solvd.PhonesHierarchyMaven.phone.features;
 
 import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.PeripheralType;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.InvalidCameraResolution;
-import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambda_functions.IReceivesInformation;
+import main.java.com.solvd.PhonesHierarchyMaven.phone.interfaces.lambdafunctions.IReceivesInformation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

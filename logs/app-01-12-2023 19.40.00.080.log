@@ -1,0 +1,26 @@
+2023-12-01 19:40:00,525 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-01 19:40:00,567 INFO m.j.c.s.P.p.Phone [main] App ig installed in Asus ROGPhone6DUltimate
+2023-12-01 19:40:00,569 INFO m.j.c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-12-01 19:40:00,580 INFO m.j.c.s.P.Main [main] 3 phones have no Apps
+2023-12-01 19:40:00,581 INFO m.j.c.s.P.Main [main] Class name: main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 19:40:00,583 INFO m.j.c.s.P.Main [main] NAME= LOGGER TYPE = interface org.apache.logging.log4j.Logger MODIFIERS = private static final
+2023-12-01 19:40:00,585 INFO m.j.c.s.P.Main [main] NAME= ObjectsPhoneCreated TYPE = int MODIFIERS = private static
+2023-12-01 19:40:00,586 INFO m.j.c.s.P.Main [main] NAME= contactList TYPE = interface java.util.Map MODIFIERS = private
+2023-12-01 19:40:00,587 INFO m.j.c.s.P.Main [main] NAME= picturesNamesList TYPE = interface java.util.List MODIFIERS = private
+2023-12-01 19:40:00,588 INFO m.j.c.s.P.Main [main] NAME= videosNamesList TYPE = interface java.util.List MODIFIERS = private
+2023-12-01 19:40:00,589 INFO m.j.c.s.P.Main [main] NAME= apps TYPE = interface java.util.Set MODIFIERS = private
+2023-12-01 19:40:00,590 INFO m.j.c.s.P.Main [main] NAME= chargingConnectionEnum TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection MODIFIERS = private
+2023-12-01 19:40:00,591 INFO m.j.c.s.P.Main [main] NAME= brandEnum TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand MODIFIERS = private
+2023-12-01 19:40:00,592 INFO m.j.c.s.P.Main [main] NAME= model TYPE = class java.lang.String MODIFIERS = private final
+2023-12-01 19:40:00,594 INFO m.j.c.s.P.Main [main] NAME= battery TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Battery MODIFIERS = private
+2023-12-01 19:40:00,595 INFO m.j.c.s.P.Main [main] NAME= camera TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Camera MODIFIERS = private
+2023-12-01 19:40:00,597 INFO m.j.c.s.P.Main [main] NAME= display TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Display MODIFIERS = private
+2023-12-01 19:40:00,598 INFO m.j.c.s.P.Main [main] NAME= processor TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.Processor MODIFIERS = private
+2023-12-01 19:40:00,599 INFO m.j.c.s.P.Main [main] NAME= storageMemory TYPE = class main.java.com.solvd.PhonesHierarchyMaven.phone.features.StorageMemory MODIFIERS = private
+2023-12-01 19:40:00,600 INFO m.j.c.s.P.Main [main] NAME= phoneNumber TYPE = long MODIFIERS = protected
+2023-12-01 19:40:00,601 INFO m.j.c.s.P.Main [main] NAME= price TYPE = double MODIFIERS = protected
+2023-12-01 19:40:00,603 INFO m.j.c.s.P.Main [main] NAME= weight TYPE = double MODIFIERS = protected
+2023-12-01 19:40:00,604 INFO m.j.c.s.P.Main [main] main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 19:40:00,605 INFO m.j.c.s.P.Main [main] 	3 parameters
+2023-12-01 19:40:00,606 INFO m.j.c.s.P.Main [main] main.java.com.solvd.PhonesHierarchyMaven.phone.Phone
+2023-12-01 19:40:00,608 INFO m.j.c.s.P.Main [main] 	13 parameters

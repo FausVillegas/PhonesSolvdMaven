@@ -1,0 +1,26 @@
+2023-12-02 14:06:34,519 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-02 14:06:34,565 INFO m.j.c.s.P.p.Phone [main] App ig installed in Asus ROGPhone6DUltimate
+2023-12-02 14:06:34,567 INFO m.j.c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-12-02 14:06:34,568 INFO m.j.c.s.P.Main [main] Phones without Apps: 
+2023-12-02 14:06:34,576 INFO m.j.c.s.P.Main [main] 4 phones have no Apps
+2023-12-02 14:06:34,578 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic1
+2023-12-02 14:06:34,579 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic2
+2023-12-02 14:06:34,580 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic3
+2023-12-02 14:06:34,582 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic4
+2023-12-02 14:06:34,583 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic5
+2023-12-02 14:06:34,584 INFO m.j.c.s.P.Main [main] Phones with 5 or more photos: 
+2023-12-02 14:06:34,587 INFO m.j.c.s.P.Main [main] CAT S62 PRO took 5 or more photos
+2023-12-02 14:06:34,601 INFO m.j.c.s.P.Main [main] Average phone price: 783.3333333333334
+2023-12-02 14:06:34,607 INFO m.j.c.s.P.Main [main] Weight sum: 860.0
+2023-12-02 14:06:34,608 INFO m.j.c.s.P.Main [main] Phones sorted by phone number
+2023-12-02 14:06:34,626 INFO m.j.c.s.P.Main [main] Phone number: 10000000	CAT S62 PRO
+2023-12-02 14:06:34,627 INFO m.j.c.s.P.Main [main] Phone number: 11111111	Samsung S22
+2023-12-02 14:06:34,629 INFO m.j.c.s.P.Main [main] Phone number: 12222222	Samsung S23
+2023-12-02 14:06:34,630 INFO m.j.c.s.P.Main [main] Phone number: 22222222	Asus ROGPhone6DUltimate
+2023-12-02 14:06:34,631 INFO m.j.c.s.P.Main [main] Phone number: 33333333	CAT S62 PRO
+2023-12-02 14:06:34,632 INFO m.j.c.s.P.Main [main] Phone number: 44444444	Nokia 5310
+2023-12-02 14:06:34,638 INFO m.j.c.s.P.Main [main] Samsung S22 battery charged
+2023-12-02 14:06:34,639 INFO m.j.c.s.P.Main [main] Samsung S23 battery charged
+2023-12-02 14:06:34,640 INFO m.j.c.s.P.Main [main] Samsung phone batteries 100 percent charged
+2023-12-02 14:06:34,657 INFO m.j.c.s.P.p.SmartPhone [main] Contact saved in SmartPhone: Fausto 341412342
+2023-12-02 14:06:34,659 INFO m.j.c.s.P.Main [main] Fausto's number: Optional[341412342]

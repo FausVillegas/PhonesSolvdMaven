@@ -1,0 +1,14 @@
+2023-12-02 02:24:56,335 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-02 02:24:56,375 INFO m.j.c.s.P.p.Phone [main] App ig installed in Asus ROGPhone6DUltimate
+2023-12-02 02:24:56,377 INFO m.j.c.s.P.p.Phone [main] App YouTube installed in Samsung S22
+2023-12-02 02:24:56,385 INFO m.j.c.s.P.Main [main] 3 phones have no Apps
+2023-12-02 02:24:56,387 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic1
+2023-12-02 02:24:56,388 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic2
+2023-12-02 02:24:56,389 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic3
+2023-12-02 02:24:56,390 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic4
+2023-12-02 02:24:56,391 INFO m.j.c.s.P.p.RuggedPhone [main] Photo taken from a RuggedPhone: pic5
+2023-12-02 02:24:56,394 INFO m.j.c.s.P.Main [main] CAT S62 PRO took 5 or more photos
+2023-12-02 02:24:56,404 INFO m.j.c.s.P.p.SmartPhone [main] Contact saved in SmartPhone: Fausto 11111111
+2023-12-02 02:24:56,405 INFO m.j.c.s.P.Main [main] Fausto's number: Optional[11111111]
+2023-12-02 02:24:56,418 INFO m.j.c.s.P.Main [main] Average phone price: 760.0
+2023-12-02 02:24:56,423 INFO m.j.c.s.P.Main [main] Weight sum: 730.0
