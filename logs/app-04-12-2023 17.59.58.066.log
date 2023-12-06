@@ -1,0 +1,34 @@
+2023-12-04 17:59:58,652 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-04 17:59:58,710 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 17:59:58,712 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 17:59:58,713 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 17:59:58,714 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 17:59:58,715 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 17:59:58,719 INFO m.j.c.s.P.t.RunnableThread [Thread-1] Thread-1 0
+2023-12-04 17:59:58,723 INFO m.j.c.s.P.t.RunnableThread [Thread-1] Thread-1 1
+2023-12-04 17:59:58,723 INFO m.j.c.s.P.t.RunnableThread [Thread-1] Thread-1 2
+2023-12-04 17:59:58,723 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-1] pool-2-thread-1 getting connection
+2023-12-04 17:59:58,720 INFO m.j.c.s.P.t.MyThread [Thread-0] Thread-0 0
+2023-12-04 17:59:58,725 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-1] pool-2-thread-1 got connection
+2023-12-04 17:59:58,724 INFO m.j.c.s.P.t.RunnableThread [Thread-1] Thread-1 3
+2023-12-04 17:59:58,727 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-6] pool-2-thread-6 getting connection
+2023-12-04 17:59:58,728 INFO m.j.c.s.P.t.RunnableThread [Thread-1] Thread-1 4
+2023-12-04 17:59:58,729 INFO m.j.c.s.P.t.RunnableThread [Thread-1] Thread-1 5
+2023-12-04 17:59:58,727 INFO m.j.c.s.P.t.MyThread [Thread-0] Thread-0 1
+2023-12-04 17:59:58,728 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-6] pool-2-thread-6 got connection
+2023-12-04 17:59:58,732 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-2] pool-2-thread-2 getting connection
+2023-12-04 17:59:58,734 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-2] pool-2-thread-2 got connection
+2023-12-04 17:59:58,736 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-5] pool-2-thread-5 getting connection
+2023-12-04 17:59:58,738 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-5] pool-2-thread-5 got connection
+2023-12-04 17:59:58,739 INFO m.j.c.s.P.t.MyThread [Thread-0] Thread-0 2
+2023-12-04 17:59:58,740 INFO m.j.c.s.P.t.MyThread [Thread-0] Thread-0 3
+2023-12-04 17:59:58,741 INFO m.j.c.s.P.t.MyThread [Thread-0] Thread-0 4
+2023-12-04 17:59:58,730 INFO m.j.c.s.P.t.RunnableThread [Thread-1] Thread-1 6
+2023-12-04 17:59:58,743 INFO m.j.c.s.P.t.MyThread [Thread-0] Thread-0 5
+2023-12-04 17:59:58,745 INFO m.j.c.s.P.t.MyThread [Thread-0] Thread-0 6
+2023-12-04 17:59:58,750 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-4] pool-2-thread-4 getting connection
+2023-12-04 17:59:58,752 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-4] pool-2-thread-4 got connection
+2023-12-04 17:59:58,754 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-3] pool-2-thread-3 getting connection
+2023-12-04 17:59:58,756 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-7] pool-2-thread-7 getting connection
+2023-12-04 17:59:59,728 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-3] pool-2-thread-3 got connection
+2023-12-04 17:59:59,733 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-7] pool-2-thread-7 got connection

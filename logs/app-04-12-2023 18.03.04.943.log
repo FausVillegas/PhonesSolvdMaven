@@ -1,0 +1,20 @@
+2023-12-04 18:03:05,525 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-04 18:03:05,571 INFO m.j.c.s.P.t.Connection [main] New connection
+2023-12-04 18:03:05,572 INFO m.j.c.s.P.t.Connection [main] New connection
+2023-12-04 18:03:05,573 INFO m.j.c.s.P.t.Connection [main] New connection
+2023-12-04 18:03:05,575 INFO m.j.c.s.P.t.Connection [main] New connection
+2023-12-04 18:03:05,576 INFO m.j.c.s.P.t.Connection [main] New connection
+2023-12-04 18:03:05,581 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-1] pool-2-thread-1 getting connection
+2023-12-04 18:03:05,583 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-1] pool-2-thread-1 got connection
+2023-12-04 18:03:05,585 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-7] pool-2-thread-7 getting connection
+2023-12-04 18:03:05,587 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-7] pool-2-thread-7 got connection
+2023-12-04 18:03:05,587 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-5] pool-2-thread-5 getting connection
+2023-12-04 18:03:05,589 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-5] pool-2-thread-5 got connection
+2023-12-04 18:03:05,590 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-6] pool-2-thread-6 getting connection
+2023-12-04 18:03:05,592 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-6] pool-2-thread-6 got connection
+2023-12-04 18:03:05,593 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-4] pool-2-thread-4 getting connection
+2023-12-04 18:03:05,594 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-4] pool-2-thread-4 got connection
+2023-12-04 18:03:05,596 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-3] pool-2-thread-3 getting connection
+2023-12-04 18:03:05,597 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-2] pool-2-thread-2 getting connection
+2023-12-04 18:03:06,586 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-3] pool-2-thread-3 got connection
+2023-12-04 18:03:06,588 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-2] pool-2-thread-2 got connection

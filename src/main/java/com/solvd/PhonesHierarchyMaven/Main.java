@@ -5,6 +5,7 @@ import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.Brand;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.enums.ChargingConnection;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.exceptions.InvalidIntScanner;
 import main.java.com.solvd.PhonesHierarchyMaven.phone.*;
+import main.java.com.solvd.PhonesHierarchyMaven.threads.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,16 +17,16 @@ import java.io.IOException;
 import java.lang.reflect.*;
 import java.nio.charset.Charset;
 import java.util.*;
+import java.util.concurrent.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Main{
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //with all the information
         Phone samsungS22 = new SmartPhone(Brand.SAMSUNG,ChargingConnection.USBC, "S22", 4000, 30, 50, 6.1, "Octa-Core", 128, 8, "Android", true, 11111111, 900, 130);
         GamingPhone asusRogPhone6DUltimate = new GamingPhone(Brand.ASUS,ChargingConnection.USBC, "ROGPhone6DUltimate", 6000, 40, 50, 6.78, "Mali-G710", 512, 16, "Android 12", true, true, 22222222, 1200, 140);
@@ -44,7 +45,51 @@ public class Main{
 
 //        lambdaFunctionsEnums(phonesList);
 
+//        streamAndReflection(phonesList);
+
+        //Threads
+
+        ConcurrentLinkedQueue<Thread> threadLinkedQueue = new ConcurrentLinkedQueue<>();
+
+        MyThread basicThread = new MyThread();
+        Thread basicRunnableThread = new Thread(new RunnableThread());
+        threadLinkedQueue.add(basicThread);
+        threadLinkedQueue.add(basicRunnableThread);
+
+        for(int i=0;i<4;i++){
+            threadLinkedQueue.add(new Thread(new RunnableThread()));
+        }
+
+        for(Thread thread: threadLinkedQueue){
+            Thread.sleep(400);
+            thread.start();
+        }
+
+        ConnectionPool connectionPool = ConnectionPool.create();
+        Thread thread = new Thread(new ConnectionThread(connectionPool));
+        int t = 7;
+        ExecutorService executorService = Executors.newFixedThreadPool(t);
+        for(int i=0;i<t;i++)
+            executorService.execute(thread);
+        executorService.shutdown();
+
+        Future<String> future = executorService.submit(new CallableThread());
+        try {
+            future.get();
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void streamAndReflection(List<Phone> phonesList){
         //---------------Collection streaming-----------------------
+
+        Phone samsungS22 = phonesList.get(0);
+        Phone asusRogPhone6DUltimate = phonesList.get(1);
+        Phone catS62Pro = phonesList.get(2);
+        Phone catS62Pro2 = phonesList.get(3);
+        Phone nokia5310 = phonesList.get(4);
+        Phone samsungS23 = phonesList.get(5);
 
         asusRogPhone6DUltimate.installApp("ig");
         samsungS22.installApp("YouTube");
@@ -97,65 +142,64 @@ public class Main{
         Optional<Long> contactNumber = Optional.ofNullable(samsungS22.getContactList().get(contactNameToSearch));
         LOGGER.info(contactNameToSearch+"'s number: "+contactNumber);
 
-//        //----------------Reflection----------------------------
+        //----------------Reflection----------------------------
 
-//        LOGGER.info("---------------Reflection---------------");
-//        try{
-//            Class<Phone> phoneClass = Phone.class;
-//            LOGGER.info("Class: "+phoneClass.getName());
-//
-//            // Fields
-//            LOGGER.info("-----------Fields------------");
-//            Field[] fieldList = phoneClass.getDeclaredFields();
-//            for(Field field: fieldList){
-//                LOGGER.info("NAME = " + field.getName()
-//                        + " TYPE = " + field.getType()
-//                        + " MODIFIERS = " + Modifier.toString(field.getModifiers()));
-//            }
-//
-//            //Constructors
-//            LOGGER.info("-----------Constructors------------");
-//            Constructor[] constructors = phoneClass.getConstructors();
-//            for (Constructor constructor : constructors){
-//                Parameter[] parameters = constructor.getParameters();
-//                LOGGER.info("CONSTRUCTOR = "+constructor.getName()+
-//                        "\t with "+parameters.length+" parameter/s"
-//                );
-//                LOGGER.info("\t PARAMETERS: ");
-//                for(Parameter parameter: parameters){
-//                    LOGGER.info("\t\t"+parameter.getName()+" "+parameter.getType());
-//                }
-//            }
-//
-//            //Methods
-//            LOGGER.info("-----------Methods------------");
-//            Method[] methods = phoneClass.getDeclaredMethods();
-//            for(Method method:methods){
-//                LOGGER.info("METHOD NAME = "+method.getName()+
-//                        "\t MODIFIERS = "+Modifier.toString(method.getModifiers())
-//                );
-//            }
-//            LOGGER.info("-------------------------------");
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//        try {
-//            Class<SmartPhone> smartPhoneClass = SmartPhone.class;
-//
-//            //Creating new object using reflection
-//            Constructor<SmartPhone> smartPhoneConstructor = smartPhoneClass.getConstructor(Brand.class, String.class, String.class, String.class);
-//            SmartPhone samsungS23 = smartPhoneConstructor.newInstance(Brand.SAMSUNG,"S23","SnapDragon","Android");
-//
-//            //Calling methods using reflection
-//            Method methodGetModel = smartPhoneClass.getMethod("getModel");
-//            Method methodGetBrand = smartPhoneClass.getMethod("getBrandEnum");
-//            LOGGER.info("Phone brand: "+methodGetBrand.invoke(samsungS23)+" Model: "+methodGetModel.invoke(samsungS23));
-//        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
-//            throw new RuntimeException(e);
-//        }
+        LOGGER.info("---------------Reflection---------------");
+        try{
+            Class<Phone> phoneClass = Phone.class;
+            LOGGER.info("Class: "+phoneClass.getName());
+
+            // Fields
+            LOGGER.info("-----------Fields------------");
+            Field[] fieldList = phoneClass.getDeclaredFields();
+            for(Field field: fieldList){
+                LOGGER.info("NAME = " + field.getName()
+                        + " TYPE = " + field.getType()
+                        + " MODIFIERS = " + Modifier.toString(field.getModifiers()));
+            }
+
+            //Constructors
+            LOGGER.info("-----------Constructors------------");
+            Constructor[] constructors = phoneClass.getConstructors();
+            for (Constructor constructor : constructors){
+                Parameter[] parameters = constructor.getParameters();
+                LOGGER.info("CONSTRUCTOR = "+constructor.getName()+
+                        "\t with "+parameters.length+" parameter/s"
+                );
+                LOGGER.info("\t PARAMETERS: ");
+                for(Parameter parameter: parameters){
+                    LOGGER.info("\t\t"+parameter.getName()+" "+parameter.getType());
+                }
+            }
+
+            //Methods
+            LOGGER.info("-----------Methods------------");
+            Method[] methods = phoneClass.getDeclaredMethods();
+            for(Method method:methods){
+                LOGGER.info("METHOD NAME = "+method.getName()+
+                        "\t MODIFIERS = "+Modifier.toString(method.getModifiers())
+                );
+            }
+            LOGGER.info("-------------------------------");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            Class<SmartPhone> smartPhoneClass = SmartPhone.class;
+
+            //Creating new object using reflection
+            Constructor<SmartPhone> smartPhoneConstructor = smartPhoneClass.getConstructor(Brand.class, String.class, String.class, String.class);
+            SmartPhone samsungS21 = smartPhoneConstructor.newInstance(Brand.SAMSUNG,"S21","SnapDragon","Android");
+
+            //Calling methods using reflection
+            Method methodGetModel = smartPhoneClass.getMethod("getModel");
+            Method methodGetBrand = smartPhoneClass.getMethod("getBrandEnum");
+            LOGGER.info("Phone brand: "+methodGetBrand.invoke(samsungS21)+" Model: "+methodGetModel.invoke(samsungS21));
+        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
+            throw new RuntimeException(e);
+        }
     }
-
     public static void lambdaFunctionsEnums(List<Phone> phonesList){
         //lambda functions
 
@@ -306,7 +350,6 @@ public class Main{
         averageRam = totalRam / phonesToCalculate;
         LOGGER.info("averageRam of the first "+phonesToCalculate+" phones: "+averageRam);
     }
-
     public static void exceptionOccurs(int p, ArrayList<Phone> pl, int ptc) throws InvalidIntScanner{
         if(p==0)
             throw new ArithmeticException("Division by zero (No Phone objects created)");

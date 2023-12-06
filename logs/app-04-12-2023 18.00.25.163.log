@@ -1,0 +1,20 @@
+2023-12-04 18:00:25,818 INFO m.j.c.s.P.p.Phone [main] Phone/s created
+2023-12-04 18:00:25,878 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 18:00:25,880 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 18:00:25,881 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 18:00:25,883 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 18:00:25,886 INFO m.j.c.s.P.t.Connection [main] New connection: ConnectionPool
+2023-12-04 18:00:25,895 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-1] pool-2-thread-1 getting connection
+2023-12-04 18:00:25,898 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-1] pool-2-thread-1 got connection
+2023-12-04 18:00:25,900 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-6] pool-2-thread-6 getting connection
+2023-12-04 18:00:25,905 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-6] pool-2-thread-6 got connection
+2023-12-04 18:00:25,906 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-4] pool-2-thread-4 getting connection
+2023-12-04 18:00:25,908 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-4] pool-2-thread-4 got connection
+2023-12-04 18:00:25,910 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-5] pool-2-thread-5 getting connection
+2023-12-04 18:00:25,911 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-5] pool-2-thread-5 got connection
+2023-12-04 18:00:25,913 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-2] pool-2-thread-2 getting connection
+2023-12-04 18:00:25,914 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-2] pool-2-thread-2 got connection
+2023-12-04 18:00:25,915 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-3] pool-2-thread-3 getting connection
+2023-12-04 18:00:25,919 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-7] pool-2-thread-7 getting connection
+2023-12-04 18:00:26,902 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-3] pool-2-thread-3 got connection
+2023-12-04 18:00:26,907 INFO m.j.c.s.P.t.ConnectionPool [pool-2-thread-7] pool-2-thread-7 got connection
